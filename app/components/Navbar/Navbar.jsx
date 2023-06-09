@@ -12,14 +12,14 @@ const Navbar = () => {
   // window.addEventListener('scroll', () => console.log(scrollYProgress.get()));
 
   return (
-    <header className={`${styles.container} ${active && styles.active}`}>
+    <header className={styles.container}>
       <span className={styles.slogan}>
         THE AI FOR <br /> PRESERVING <br /> YOUR LEGACY
       </span>
       <Image
         src="/logo.png"
         width={275}
-        height={70}
+        height={50}
         alt="Logo"
         className={styles.title}
       />
