@@ -1,0 +1,167 @@
+.container {
+  /* margin: 5rem 0; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(34, minmax(0, 1fr));
+  color: var(--aqua-light);
+
+  text-align: center;
+}
+
+.menuContainer {
+  /* background-color: #fff; */
+  height: 100%;
+  grid-column: 2 / span 4;
+  grid-row: 1 / span 5;
+  font-size: 1.5rem;
+}
+
+.menuBtn {
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 7.5rem;
+  width: 7.5rem;
+
+  cursor: pointer;
+
+  background-color: var(--dark);
+  border-radius: 50%;
+  border: 2px solid var(--aqua);
+  box-shadow: 0 0 15px 2px var(--aqua), 0 0 5px var(--aqua) inset;
+  color: var(--aqua);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  grid-column: 5 / span 25;
+  grid-row-start: 1;
+  white-space: nowrap;
+  text-align: center;
+  scroll-behavior: smooth;
+  font-size: 20rem;
+  font-weight: 400;
+  text-shadow: 2px 2px 15px var(--dark);
+}
+
+.hero :first-child {
+  /* background-color: #fff; */
+  padding-bottom: 0;
+  height: 50vh;
+  margin-bottom: 18rem;
+  position: sticky;
+  top: 5rem;
+  bottom: 100rem;
+  mix-blend-mode: difference;
+}
+
+.hero :nth-child(n + 2) {
+  margin-bottom: 20rem;
+  height: 50vh;
+
+  display: flex;
+  /* grid-column: 1 / span 34; */
+  justify-content: center;
+  align-items: flex-start;
+  position: sticky;
+  top: 40vh;
+}
+
+.hero :nth-child(2) {
+  margin-top: -28rem;
+  /* margin-bottom: 10rem; */
+}
+
+.hero :nth-child(5) {
+  margin-bottom: 0;
+  color: var(--aqua);
+}
+
+.scrollContainer {
+  /* background-color: #fff; */
+  height: 100%;
+  grid-column: 30 / span 4;
+  grid-row: 1 / span 2;
+  font-size: 1.5rem;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.scrollIcon {
+  position: sticky;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  height: 10rem;
+  width: 10rem;
+
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconSVG {
+  animation: scrollArrow 0.8s infinite alternate-reverse ease;
+}
+
+@keyframes scrollArrow {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.noDisplay {
+  display: none;
+}
+
+.descContainer {
+  position: relative;
+  margin: 20rem 0;
+  padding: 2rem 4rem;
+  padding-bottom: 3rem;
+  grid-column: 20 / span 15;
+  height: 25rem;
+
+  background: var(--dark-blur);
+  backdrop-filter: blur(5px);
+
+  border-radius: 20px 0 0 20px;
+  font-size: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.descTitle {
+  position: absolute;
+  top: -60px;
+  margin-bottom: 1rem;
+  color: var(--aqua);
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.descContainer > p {
+  padding-top: 2rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.imgsContainer {
+  grid-column: 1 / span 34;
+  height: 100vh;
+  background-color: var(--dark);
+}

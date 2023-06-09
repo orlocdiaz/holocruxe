@@ -1,0 +1,57 @@
+@import url('https://use.typekit.net/ewr7fmo.css');
+
+:root {
+  --dark: #213c50;
+  --dark-blur: #213c5096;
+  --white: #f7f9f9;
+  --aqua: #59c1bd;
+  --aqua-light: #c2e6e5;
+  --aqua-lighter: #8dd3d1;
+  --font-1: 'nasalization', sans-serif;
+  --font-2: 'grover', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-1);
+  /* font-weight: 400; */
+  font-style: normal;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  height: 1000vh;
+  background-color: #0f1010;
+
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.6em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  width: 1em;
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--aqua);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--aqua-lighter);
+}

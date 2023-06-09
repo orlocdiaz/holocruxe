@@ -1,0 +1,27 @@
+.container {
+  height: fit-content;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.content {
+  color: var(--white);
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  /* scroll-margin-bottom: 10em; */
+}
+
+.content > * {
+  scroll-snap-align: center;
+}
+
+.anim {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
