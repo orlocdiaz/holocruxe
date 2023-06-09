@@ -28,7 +28,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  height: 1000vh;
+  /* height: 1000vh; */
   background-color: #0f1010;
 
   scroll-behavior: smooth;

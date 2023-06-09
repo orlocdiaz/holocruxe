@@ -16,7 +16,7 @@ import { degreesToRadians, progress, mix } from 'popmotion';
 import { Suspense, useCallback, useMemo, useRef, useLayoutEffect } from 'react';
 import Main from './components/Main/Main';
 
-function Points() {
+/* function Points() {
   const circleImg =
     'https://raw.githubusercontent.com/Claeb101/3d-ripple-animation/main/src/assets/circle.png';
   const imgTex = useLoader(THREE.TextureLoader, circleImg);
@@ -90,7 +90,7 @@ function Points() {
       />
     </points>
   );
-}
+} */
 
 function Sphere({ stars }) {
   const sphereMap = useEnvironment({ files: 'sky.hdr' });
@@ -108,18 +108,6 @@ function Sphere({ stars }) {
         roughness={0.05}
         envMap={sphereMap}
         envMapIntensity={0.3}
-        // emissive={0x20435e}
-        // vertexColors={true}
-        // clearcoat={1}
-        // clearcoatRoughness={0.1}
-        // transparent
-        // transmission={0.95}
-        // opacity={0.5}
-        // reflectivity={0.2}
-        // ior={0.9}
-        // normalMap={texture}
-        // normalScale={new THREE.Vector2(0.15, 0.15)}
-        // fog={true}
       />
       {stars}
     </mesh>
@@ -161,31 +149,10 @@ const Star = ({ p }) => {
         roughness={0.05}
         envMap={sphereMap}
         envMapIntensity={0.3}
-        // emissive={0x20435e}
-        // vertexColors={true}
-        // clearcoat={1}
-        // clearcoatRoughness={0.1}
-        // transparent
-        // transmission={0.95}
-        // opacity={0.5}
-        // reflectivity={0.2}
-        // ior={0.9}
       />
     </mesh>
   );
 };
-
-/* function AllStars() {
-  const [x, y, z] = Array(3)
-    .fill()
-    .map(() => THREE.MathUtils.randFloatSpread(100));
-  return (
-    <mesh position={[x, y, z]}>
-      <sphereGeometry args={[Math.random() * 0.25, 20, 20]} />
-      <meshStandardMaterial />
-    </mesh>
-  );
-} */
 
 function AnimationCanvas({ numStars = 20 }) {
   const gl = useThree((state) => state.gl);
@@ -221,11 +188,9 @@ function AnimationCanvas({ numStars = 20 }) {
   return (
     <>
       <hemisphereLight args={['#0f1010', '#4c94d4']} intensity={1} />
-      {/* <pointLight position={[10, 20, 10]} color={0x59c1bd} /> */}
       <Suspense fallback={null}>
-        {/* <Ring /> */}
         <Environment map={envMap} background />
-        <Sphere stars={stars} />
+        <Sphere stars={stars} className={styles.sphere} />
         <Stars map={null} radius={300} depth={50} count={2000} factor={3} />
         {/* <Points /> */}
       </Suspense>
